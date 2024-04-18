@@ -1,0 +1,93 @@
+/* General CSS */
+
+body {
+  background-color: #22232e;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+section {
+  width: 80%;
+  margin: 50px auto;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Neon button CSS */
+.neon-button {
+  /* posizione */
+  position: relative;
+
+  /* bordi e spaziature */
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 15px;
+
+  /* colori */
+  background-color: transparent;
+
+  /* effetti */
+  transition: 0.2s;
+}
+
+.neon-button .text {
+  /* bordi e spaziature */
+  padding: 15px 50px;
+  border: 2px solid #00c2cb;
+  border-radius: 15px;
+
+  /* font */
+  font-size: 25px;
+
+  /* colori */
+  color: #e0ffff;
+  background-color: rgba(0, 70, 80, 0.05);
+
+  /* effetti */
+  backdrop-filter: blur(25px);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.neon-button:hover {
+  box-shadow: 0 0 3px 0 rgba(0, 194, 203);
+}
+
+.neon-button .neon {
+  /* dimensioni */
+  width: 35%;
+  height: 5px;
+
+  /* bordi */
+  border-radius: 10px;
+
+  /* posizione */
+  z-index: -1;
+  position: absolute;
+  top: 115%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  /* colori */
+  background-color: #00c2cb;
+  box-shadow: 0 0 10px 0 rgba(0, 194, 203);
+
+  /* effetti */
+  transition: 0.2s;
+}
+
+.neon-button:hover .neon {
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 60%;
+  width: 60%;
+}
