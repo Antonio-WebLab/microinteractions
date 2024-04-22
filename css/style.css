@@ -1,5 +1,4 @@
 /* General CSS */
-
 body {
   background-color: #22232e;
   color: white;
@@ -20,7 +19,8 @@ p {
   opacity: 0.9;
 }
 
-/* Neon button CSS */
+/* # Neon button */
+
 .neon-button {
   /* posizione */
   position: relative;
@@ -49,16 +49,12 @@ p {
 
   /* colori */
   color: #e0ffff;
-  background-color: rgba(0, 70, 80, 0.05);
+  background-color: rgba(0, 70, 80, 0.1);
 
   /* effetti */
   backdrop-filter: blur(25px);
   cursor: pointer;
   transition: 0.2s;
-}
-
-.neon-button:hover {
-  box-shadow: 0 0 3px 0 rgba(0, 194, 203);
 }
 
 .neon-button .neon {
@@ -84,10 +80,76 @@ p {
   transition: 0.2s;
 }
 
+/* # Neon Button Hover */
+
+.neon-button:hover {
+  box-shadow: 0 0 3px 0 rgba(0, 194, 203);
+}
+
 .neon-button:hover .neon {
+  /* posizione */
   top: 50%;
   transform: translate(-50%, -50%);
 
+  /* dimensioni */
   height: 60%;
   width: 60%;
+}
+
+/* # Neon Button Active */
+
+.neon-button:active {
+  box-shadow: 0 0 10px 0 rgba(0, 194, 203);
+}
+
+.neon-button:active .neon {
+  /* posizione */
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  /* dimensioni */
+  height: 80%;
+  width: 80%;
+}
+
+/* # Bouncy button */
+
+.bouncy-button {
+  /* margini e spaziature */
+  margin: 0;
+  padding: 0;
+
+  /* colore */
+  background-color: #004958;
+
+  /* bordi */
+  border: none;
+  border-radius: 15px;
+}
+
+.bouncy-button .text {
+  /* margini e spaziature */
+  padding: 15px 50px;
+
+  /* bordi */
+  border-radius: 15px;
+
+  /* font */
+  font-size: 25px;
+
+  /* colori */
+  background-color: #00c2cb;
+  transform: translateY(-6px);
+
+  /* effetti */
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.bouncy-button:hover .text {
+  transform: translateY(-8px);
+}
+
+.bouncy-button:active .text {
+  transform: translateY(0);
 }
